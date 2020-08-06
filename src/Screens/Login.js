@@ -6,7 +6,7 @@ const width=Dimensions.get("screen").width
 const height=Dimensions.get("screen").height
 
 
-const HomeScreen=()=>{
+const LoginScreen=()=>{
     return(
         <View
         style={{
@@ -15,7 +15,7 @@ const HomeScreen=()=>{
             alignItems:"center"
         }}
         >
-            <Text>WELCOME TO THE HOME SCREEN</Text>
+            <Text>WELCOME TO THE LOGIN SCREEN</Text>
         </View>
     )
 
@@ -24,4 +24,4 @@ const HomeScreen=()=>{
 }
 
 
-export default HomeScreen;
+export default LoginScreen;

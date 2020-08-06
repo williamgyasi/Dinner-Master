@@ -15,7 +15,7 @@ const HomeScreen=()=>{
             alignItems:"center"
         }}
         >
-            <Text>WELCOME TO THE HOME SCREEN</Text>
+            <Text>WELCOME TO THE SEARCH SCREEN</Text>
         </View>
     )
 
