@@ -1,5 +1,5 @@
 import React from 'react'
-import {View,Container,Text,Col} from 'native-base'
+import {View,Container,Text,Col,Button} from 'native-base'
 import {Dimensions} from 'react-native'
 
 const width=Dimensions.get("screen").width
