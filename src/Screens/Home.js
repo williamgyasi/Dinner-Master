@@ -10,12 +10,12 @@ const HomeScreen=()=>{
     return(
         <View
         style={{
-            backgroundColor:"red",
+            flex:1,
             justifyContent:"center",
             alignItems:"center"
         }}
         >
-            <Text>WELCOME TO THE HOME SCREEN</Text>
+            <Text>WELCOME TO THE MAIN HOME SCREEN</Text>
         </View>
     )
 

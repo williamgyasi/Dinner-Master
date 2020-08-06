@@ -10,7 +10,7 @@ const RegisterScreen=()=>{
     return(
         <View
         style={{
-            backgroundColor:"red",
+           
             justifyContent:"center",
             alignItems:"center"
         }}

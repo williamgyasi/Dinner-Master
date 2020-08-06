@@ -12,7 +12,10 @@ const RootStack=createStackNavigator();
 const RootRouter=()=>{
     return(
         <NavigationContainer>
-        <RootStack.Navigator>
+        <RootStack.Navigator 
+        screenOptions={{headerShown:false}}
+        initialRouteName="Search"
+        >
             <RootStack.Screen  name="Home" component={HomeScreen} />
             <RootStack.Screen  name="Search" component={SearchScreen} />
         </RootStack.Navigator>
