@@ -16,11 +16,10 @@ const HomeScreen=({navigation})=>{
     return(
         <View
         style={{
-            flex:1,
-            justifyContent:"center",
-            alignSelf:"center"
+           
         }}
         >
+            <SearchBar />
             <Text>WELCOME TO THE SEARCH SCREEN</Text>
             <Button
             onPress={testSearch}>
