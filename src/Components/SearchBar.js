@@ -1,9 +1,10 @@
 import React from 'react'
+import {StyleSheet,View} from 'react-native'
 
 
 const SearchBar=()=>{
     return(
-        <View>
+        <View style={styles.background}>
             
 
         </View>
@@ -11,4 +12,10 @@ const SearchBar=()=>{
 
 }
 
+
+const styles=StyleSheet.create({
+    background:{
+        backgroundColor:"#FOEEEE"
+    }
+})
 export default SearchBar;

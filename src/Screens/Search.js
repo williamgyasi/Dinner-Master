@@ -1,6 +1,7 @@
 import React from 'react'
 import {View,Container,Text,Button} from 'native-base'
 import {Dimensions} from 'react-native'
+import SearchBar from '../Components/SearchBar'
 
 const width=Dimensions.get("screen").width
 const height=Dimensions.get("screen").height
@@ -8,7 +9,6 @@ const height=Dimensions.get("screen").height
 
 
 const HomeScreen=({navigation})=>{
-
     const testSearch = ()=>{
         navigation.navigate("Home")
     }
