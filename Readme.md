@@ -12,4 +12,4 @@ Dinner Master is a mobile application that allows you to search for restaurants 
 Link will be provided shortly
 
 ## AUTHORS
-<strong>WILLIAM KWABENA GYASI</strong>
+<strong>WILLIAM KWABENA GYASI 🏅 </strong>
