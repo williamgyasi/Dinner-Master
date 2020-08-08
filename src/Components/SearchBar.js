@@ -6,16 +6,22 @@ const width=Dimensions.get("screen").width
 const height=Dimensions.get("screen").height
 
 
-const SearchBar=()=>{
+const SearchBar=({searchkey,onSearchChange,onSearchSubmit})=>{
     return(
         <View style={styles.background}>
             <Icon type="FontAwesome" name="search" active={false} style={{color:'black',fontSize:30,marginLeft:10}} />
-            <TextInput style={styles.searchText} placeholder="Search" />
+            <TextInput 
+            value={searchkey} 
+            autoCapitalize={false}
+            autoCorrect={false}
+            onChangeText={onSearchChange} 
+            style={styles.searchText} 
+            returnKeyType="search"
+            onEndEditing={onSearchSubmit}
+            placeholder={"Search"} />
         </View>
     )
-
 }
-
 
 const styles=StyleSheet.create({
     background:{
