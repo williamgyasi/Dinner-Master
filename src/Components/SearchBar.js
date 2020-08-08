@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet,View} from 'react-native'
 import {Dimensions,TextInput} from 'react-native'
-import {Icon} from "native-base"
+import {Icon,Text} from "native-base"
 const width=Dimensions.get("screen").width
 const height=Dimensions.get("screen").height
 
@@ -9,8 +9,8 @@ const height=Dimensions.get("screen").height
 const SearchBar=()=>{
     return(
         <View style={styles.background}>
-            <Icon type="FontAwesome" name="search" active={false} style={{color:'black',fontSize:20,marginLeft:10}} />
-            <TextInput
+            <Icon type="FontAwesome" name="search" active={false} style={{color:'black',fontSize:30,marginLeft:10}} />
+            <TextInput style={styles.searchText} placeholder="Search" />
         </View>
     )
 
@@ -19,17 +19,22 @@ const SearchBar=()=>{
 
 const styles=StyleSheet.create({
     background:{
-        backgroundColor:"gray",
+        backgroundColor:"#e3e4e6",
         maxWidth:width,
         maxHeight:height,
         width:width,
-        height:45,
         margin:10,
-        padding:10,
+        alignItems:"center",
+        height:60,
+        flexDirection:"row",
         borderRadius:5,
+        padding:5,
     },
-    searchbar:{
-
+    searchText:{
+        fontSize:20,
+        color:"black",
+        marginLeft:5,
+        flex:1, 
 
     }
 
