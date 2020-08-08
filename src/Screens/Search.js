@@ -3,31 +3,14 @@ import {View,Container,Text,Button} from 'native-base'
 import {Dimensions} from 'react-native'
 import SearchBar from '../Components/SearchBar'
 import yelp from '../Api/Yelp'
+import useResults from '../Hooks/useResults'
 
 const width=Dimensions.get("screen").width
 const height=Dimensions.get("screen").height
 
 const HomeScreen=({navigation})=>{
     const [searchTerm,setSearchTerm] = useState("")
-    const [results,setResults]=useState([])
-
-    useEffect(()=>{
-        searchApi("pasta")
-    },[])
-
-    const searchApi=(keySearchTerm)=>{
-        console.log("RENDERED ONCE")
-        yelp.get('/search',{
-            params:{
-                limit:50,
-                term:keySearchTerm,
-                location:"san jose"
-
-            }
-        })
-        .then(result=>setResults(result.data.businesses))
-        .catch(error=>alert("Something Went Wrong"))
-    }
+    const [searchApi,results]=useResults()
     return(
         <View>
             <SearchBar 
