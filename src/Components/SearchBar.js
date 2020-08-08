@@ -12,7 +12,7 @@ const SearchBar=({searchkey,onSearchChange,onSearchSubmit})=>{
             <Icon type="FontAwesome" name="search" active={false} style={{color:'black',fontSize:30,marginLeft:10}} />
             <TextInput 
             value={searchkey} 
-            autoCapitalize={false}
+            autoCapitalize={"none"}
             autoCorrect={false}
             onChangeText={onSearchChange} 
             style={styles.searchText} 
