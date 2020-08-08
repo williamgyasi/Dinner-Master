@@ -11,24 +11,29 @@ const HomeScreen=({navigation})=>{
     const [searchTerm,setSearchTerm] = useState("")
     const [results,setResults]=useState([])
 
-    const searchApi=()=>{
+    useEffect(()=>{
+        searchApi("pasta")
+    },[])
+
+    const searchApi=(keySearchTerm)=>{
+        console.log("RENDERED ONCE")
         yelp.get('/search',{
             params:{
                 limit:50,
-                term:searchTerm,
-                radius:500
+                term:keySearchTerm,
+                location:"san jose"
 
             }
         })
         .then(result=>setResults(result.data.businesses))
-        .catch(error=>alert(error))
+        .catch(error=>alert("Something Went Wrong"))
     }
     return(
         <View>
             <SearchBar 
             searchkey={searchTerm} 
             onSearchChange={term=>setSearchTerm(term)}
-            onSearchSubmit={searchApi}
+            onSearchSubmit={()=>searchApi(searchTerm)}
             />
             <Text>WE HAVE FOUND {results.length}</Text>
         </View>
