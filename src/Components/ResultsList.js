@@ -1,19 +1,13 @@
 import React from 'react'
 import {View,Button,Text} from 'native-base'
 import {StyleSheet,FlatList,} from 'react-native'
+import ResultDetail from '../Components/ResultDetail'
 
 const ResultList=(props)=>{
     const{title,results}=props
 
     const renderItem=({item})=>{
-        return(
-            <View>
-                <Text>
-                    {item.name}
-                </Text>
-            </View>
-        )
-
+        return <ResultDetail details={item} />
     }
     return(
         <View>
