@@ -4,13 +4,21 @@ import {Dimensions} from 'react-native'
 import SearchBar from '../Components/SearchBar'
 import yelp from '../Api/Yelp'
 import useResults from '../Hooks/useResults'
+import ResultsList from '../Components/ResultsList'
 
 const width=Dimensions.get("screen").width
 const height=Dimensions.get("screen").height
 
-const HomeScreen=({navigation})=>{
+const SearchScreen=({navigation})=>{
     const [searchTerm,setSearchTerm] = useState("")
     const [searchApi,results]=useResults()
+    
+    const filterResultByPrice=price=>{
+        return results.filter(result=>{
+            return result.price === price
+        })
+    }
+    console.log(results)
     return(
         <View>
             <SearchBar 
@@ -19,6 +27,10 @@ const HomeScreen=({navigation})=>{
             onSearchSubmit={()=>searchApi(searchTerm)}
             />
             <Text>WE HAVE FOUND {results.length}</Text>
+            <ResultsList results={filterResultByPrice("$")}  title="Cost Effective"/>
+            <ResultsList results={filterResultByPrice("$$")} title="Bit Pricier"/>
+            <ResultsList results={filterResultByPrice("$$$")} title="Big Spender"/>
+
         </View>
     )
 
@@ -27,4 +39,4 @@ const HomeScreen=({navigation})=>{
 }
 
 
-export default HomeScreen;
+export default SearchScreen;
