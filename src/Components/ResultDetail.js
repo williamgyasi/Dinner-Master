@@ -10,8 +10,13 @@ const ResultDetail=(props)=>{
             source={{uri:details.image_url}}
             style={styles.restaurantImage} />
             <Text style={styles.restaurantName}>{details.name}</Text>
-            <View>
-                <Text>{details.rating}</Text>
+            <View style={{flexDirection:"row",alignItems:"center"}}>
+                <Icon name="star" type="Foundation" style={{fontSize:20,color:"orange"}} />
+                <Text style={{fontSize:20,color:"black",marginLeft:5}}>{details.rating}</Text>
+            </View>
+            <View style={{flexDirection:"row",alignItems:"center"}}>
+                <Icon name="chart-bar" type="FontAwesome5" style={{fontSize:20,color:"orange"}} />
+                <Text style={{fontSize:20,color:"black",marginLeft:5}}>{details.review_count} Reviews</Text>
             </View>
 
         </View>
