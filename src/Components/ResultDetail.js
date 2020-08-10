@@ -1,5 +1,5 @@
 import React from 'react'
-import {View,Text} from 'native-base'
+import {View,Text,Icon} from 'native-base'
 import {Image,StyleSheet} from 'react-native'
 
 const ResultDetail=(props)=>{
@@ -10,6 +10,9 @@ const ResultDetail=(props)=>{
             source={{uri:details.image_url}}
             style={styles.restaurantImage} />
             <Text style={styles.restaurantName}>{details.name}</Text>
+            <View>
+                <Text>{details.rating}</Text>
+            </View>
 
         </View>
     )
@@ -17,7 +20,7 @@ const ResultDetail=(props)=>{
 
 const styles=StyleSheet.create({
     detailsplaceholder:{
-        padding:10,
+        marginLeft:15,
     },
     restaurantImage:{
         width:250,
@@ -26,12 +29,12 @@ const styles=StyleSheet.create({
     },
     restaurantName:{
         fontWeight:"bold",
-        fontSize:20,
+        fontSize:15,
         marginTop:10,
-        textTransform:"uppercase"
+        textTransform:"uppercase",
+        textAlign:"left"
 
     }
-
 })
 
 export default ResultDetail;

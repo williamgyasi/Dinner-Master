@@ -2,7 +2,6 @@ import React,{useEffect,useState} from 'react'
 import {View,Container,Text,Button} from 'native-base'
 import {Dimensions} from 'react-native'
 import SearchBar from '../Components/SearchBar'
-import yelp from '../Api/Yelp'
 import useResults from '../Hooks/useResults'
 import ResultsList from '../Components/ResultsList'
 

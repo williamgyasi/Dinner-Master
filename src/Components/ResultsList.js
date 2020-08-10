@@ -10,23 +10,20 @@ const ResultList=(props)=>{
         return <ResultDetail details={item} />
     }
     return(
-        <View>
+        <View style={{marginBottom:15}}>
             <Text 
             style={{
                 fontSize:25,
                 fontWeight:"bold",
+                marginLeft:15,
+                marginBottom:10,
             }}>{title}</Text>
-
             <FlatList
             data={results}
             horizontal={true}
             keyExtractor={(result)=>result.id}
             renderItem={renderItem}
-            />
-
-
-           
-            
+            />            
         </View>
     )
 
