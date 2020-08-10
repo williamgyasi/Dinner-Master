@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import {View,Container,Text,Button} from 'native-base'
+import {ScrollView} from 'react-native'
 import {Dimensions} from 'react-native'
 import SearchBar from '../Components/SearchBar'
 import useResults from '../Hooks/useResults'
@@ -26,9 +27,12 @@ const SearchScreen=({navigation})=>{
             onSearchSubmit={()=>searchApi(searchTerm)}
             />
             <Text>WE HAVE FOUND {results.length}</Text>
+            <ScrollView>
             <ResultsList results={filterResultByPrice("$")}  title="Cost Effective"/>
             <ResultsList results={filterResultByPrice("$$")} title="Bit Pricier"/>
-            <ResultsList results={filterResultByPrice("$$$")} title="Big Spender"/>
+            <ResultsList results={filterResultByPrice("$$")} title="Big Spender"/>
+            </ScrollView>
+           
 
         </View>
     )
