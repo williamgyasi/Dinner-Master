@@ -20,7 +20,7 @@ const SearchScreen=({navigation})=>{
     }
     console.log(results)
     return(
-        <View>
+        <View style={{flex:1}}>
             <SearchBar 
             searchkey={searchTerm} 
             onSearchChange={term=>setSearchTerm(term)}
