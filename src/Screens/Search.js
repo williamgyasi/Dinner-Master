@@ -18,7 +18,6 @@ const SearchScreen=({navigation})=>{
             return result.price === price
         })
     }
-    console.log(results)
     return(
         <View style={{flex:1}}>
             <SearchBar 
@@ -26,7 +25,6 @@ const SearchScreen=({navigation})=>{
             onSearchChange={term=>setSearchTerm(term)}
             onSearchSubmit={()=>searchApi(searchTerm)}
             />
-            <Text>WE HAVE FOUND {results.length}</Text>
             <ScrollView>
             <ResultsList results={filterResultByPrice("$")}  title="Cost Effective"/>
             <ResultsList results={filterResultByPrice("$$")} title="Bit Pricier"/>

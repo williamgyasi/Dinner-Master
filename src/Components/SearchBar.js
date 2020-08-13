@@ -36,6 +36,7 @@ const styles=StyleSheet.create({
         flexDirection:"row",
         borderRadius:5,
         padding:5,
+        marginBottom:10,
     },
     searchText:{
         fontSize:20,
