@@ -1,6 +1,6 @@
 import React from 'react'
 import {View} from 'react-native'
-import {View,Container} from 'native-base'
+import {Container,Text} from 'native-base'
 const ResultDetailScreen=()=>{
     return(
         <View>

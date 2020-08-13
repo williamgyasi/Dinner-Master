@@ -9,7 +9,7 @@ import ResultsList from '../Components/ResultsList'
 const width=Dimensions.get("screen").width
 const height=Dimensions.get("screen").height
 
-const SearchScreen=({navigation})=>{
+const SearchScreen=()=>{
     const [searchTerm,setSearchTerm] = useState("")
     const [searchApi,results]=useResults()
     
@@ -26,9 +26,20 @@ const SearchScreen=({navigation})=>{
             onSearchSubmit={()=>searchApi(searchTerm)}
             />
             <ScrollView>
-            <ResultsList results={filterResultByPrice("$")}  title="Cost Effective"/>
-            <ResultsList results={filterResultByPrice("$$")} title="Bit Pricier"/>
-            <ResultsList results={filterResultByPrice("$$")} title="Big Spender"/>
+
+            <ResultsList 
+             results={filterResultByPrice("$")}  
+             title="Cost Effective" 
+            />
+            
+            <ResultsList  
+            results={filterResultByPrice("$$")} 
+            title="Bit Pricier"/>
+
+            <ResultsList 
+            results={filterResultByPrice("$$")} 
+            title="Big Spender"/>
+
             </ScrollView>
            
 

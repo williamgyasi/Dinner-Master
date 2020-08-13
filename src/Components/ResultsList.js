@@ -1,13 +1,17 @@
 import React from 'react'
 import {View,Button,Text} from 'native-base'
-import {StyleSheet,FlatList,} from 'react-native'
+import {StyleSheet,FlatList,TouchableOpacity} from 'react-native'
 import ResultDetail from '../Components/ResultDetail'
 
 const ResultList=(props)=>{
-    const{title,results}=props
+    const{title,results,navigation}=props
 
     const renderItem=({item})=>{
-        return <ResultDetail details={item} />
+        return (
+        <TouchableOpacity onPress={()=>navigation.navigate("ResultDetailScreen")}>
+            <ResultDetail details={item}  />
+        </TouchableOpacity>
+        )
     }
     return(
         <View style={{marginBottom:15}}>
@@ -17,7 +21,7 @@ const ResultList=(props)=>{
                 fontWeight:"bold",
                 marginLeft:15,
                 marginBottom:10,
-            }}>{title}</Text>
+            }}>{title}</Text> 
             <FlatList
             data={results}
             horizontal={true}
