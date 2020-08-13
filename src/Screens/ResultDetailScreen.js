@@ -20,7 +20,7 @@ const ResultDetailScreen=({route,navigation})=>{
 
     const _renderItem=({item})=>{
         return(
-            <Image style={{width:100,height:"100%"}} source={{uri:item}} />
+            <Image style={{width:100,height:100}} source={{uri:item}} />
         )
     }
 
@@ -36,7 +36,7 @@ const ResultDetailScreen=({route,navigation})=>{
             <FlatList 
             data={restaurant.photos}
             extraData={restaurant}
-            keyExtractor={(item,index)=>item.id}
+            keyExtractor={(item,index)=>item}
             renderItem={_renderItem}
 
             />
