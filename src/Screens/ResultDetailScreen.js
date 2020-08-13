@@ -1,10 +1,11 @@
 import React from 'react'
 import {View} from 'react-native'
 import {Container,Text} from 'native-base'
-const ResultDetailScreen=()=>{
+const ResultDetailScreen=({route,navigation})=>{
+    const {id}=route.params
     return(
         <View>
-            <Text>Result Show Screen</Text>
+            <Text>{id}</Text>
         </View>
 
     )

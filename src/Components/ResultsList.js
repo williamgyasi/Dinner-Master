@@ -2,13 +2,13 @@ import React from 'react'
 import {View,Button,Text} from 'native-base'
 import {StyleSheet,FlatList,TouchableOpacity} from 'react-native'
 import ResultDetail from '../Components/ResultDetail'
+import {withNavigation} from '@react-navigation/compat'
 
 const ResultList=(props)=>{
     const{title,results,navigation}=props
-
     const renderItem=({item})=>{
         return (
-        <TouchableOpacity onPress={()=>navigation.navigate("ResultDetailScreen")}>
+        <TouchableOpacity onPress={()=>navigation.navigate("ResultDetailScreen",{id:item.id})}>
             <ResultDetail details={item}  />
         </TouchableOpacity>
         )
@@ -33,4 +33,4 @@ const ResultList=(props)=>{
     )
 
 }
-export default ResultList;
+export default withNavigation(ResultList);
