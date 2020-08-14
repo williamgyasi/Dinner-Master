@@ -6,6 +6,12 @@ import {withNavigation} from '@react-navigation/compat'
 
 const ResultList=(props)=>{
     const{title,results,navigation}=props
+
+    if(!results.length){
+        return null
+    }
+
+
     const renderItem=({item})=>{
         return (
         <TouchableOpacity onPress={()=>navigation.navigate("ResultDetailScreen",{id:item.id})}>
